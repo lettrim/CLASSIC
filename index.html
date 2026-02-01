@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senos Up - Quiz Interactivo</title>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2852574504948022');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: float 4s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+        .animate-float-slow {
+            animation: float 5s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+        .animate-float-reverse {
+            animation: floatReverse 4.5s ease-in-out infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        @keyframes floatReverse {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(8px); }
+        }
+        
+        /* Estilos da Logo 3D Realista y Reagente */
+        .logo-3d-container {
+            display: inline-block;
+            perspective: 1200px;
+            transition: transform 0.1s ease-out;
+            cursor: pointer;
+            touch-action: none;
+        }
+        
+        .logo-3d-wrapper {
+            transform-style: preserve-3d;
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .logo-3d-text {
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            background: linear-gradient(
+                135deg, 
+                #ec4899 0%, 
+                #f472b6 25%, 
+                #ffffff 50%, 
+                #f472b6 75%, 
+                #ec4899 100%
+            );
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            transform: translateZ(50px);
+            filter: drop-shadow(0 20px 30px rgba(236, 72, 153, 0.4));
+            
+            /* Efecto de profundidad 3D realista */
+            text-shadow: 
+                0 1px 0 #be185d, 
+                0 2px 0 #be185d, 
+                0 3px 0 #be185d, 
+                0 4px 0 #be185d, 
+                0 5px 0 #be185d, 
+                0 6px 1px rgba(0,0,0,.1), 
+                0 0 5px rgba(0,0,0,.1), 
+                0 1px 3px rgba(0,0,0,.3), 
+                0 3px 5px rgba(0,0,0,.2), 
+                0 5px 10px rgba(0,0,0,.25), 
+                0 10px 10px rgba(0,0,0,.2), 
+                0 20px 20px rgba(0,0,0,.15);
+        }
+        
+        /* Brillo metálico animado */
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+        .logo-3d-text {
+            animation: shine 8s linear infinite;
+        }
+
+        .custom-gradient {
+            background: linear-gradient(135deg, #fce7f3 0%, #fae8ff 100%);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+
+        @keyframes bounce-short {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .animate-bounce-short {
+            animation: bounce-short 2s ease-in-out infinite;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+</head>
+<body class="antialiased text-gray-900 overflow-x-hidden">
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2852574504948022&ev=PageView&noscript=1"
+    /></noscript>
+    <div id="root"></div>
+</body>
+</html>
